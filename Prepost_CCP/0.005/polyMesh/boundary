@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "0.005/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+9
+(
+    movingWall
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       1055172;
+    }
+    fixedWalls
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       1055172;
+    }
+    frontAndBack
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       1055172;
+    }
+    inlet
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          992;
+        startFace       1055172;
+    }
+    nozzle_down
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          11691;
+        startFace       1056164;
+    }
+    nozzle_up
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          3036;
+        startFace       1067855;
+    }
+    wall
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          80848;
+        startFace       1070891;
+    }
+    topOutflow
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          6788;
+        startFace       1151739;
+    }
+    bottomOutflow
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          4756;
+        startFace       1158527;
+    }
+)
+
+// ************************************************************************* //

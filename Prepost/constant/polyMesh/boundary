@@ -15,42 +15,28 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-5
+3
 (
-    inlet
+    movingWall
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          140;
-        startFace       91004;
+        nFaces          2400;
+        startFace       281600;
     }
-    nozzle
+    fixedWalls
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          1508;
-        startFace       91144;
+        nFaces          7200;
+        startFace       284000;
     }
-    wall
+    frontAndBack
     {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          4992;
-        startFace       92652;
-    }
-    topOutflow
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          468;
-        startFace       97644;
-    }
-    bottomOutflow
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          676;
-        startFace       98112;
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          3200;
+        startFace       291200;
     }
 )
 
